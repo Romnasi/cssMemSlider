@@ -1,5 +1,5 @@
 :root {
-    --background: #25282a;
+    --background: #0f1920;
     --accent-color: #de6a23;
     --active-color: #ffffff91;
     --basic-white: #fff;
@@ -28,8 +28,10 @@ body {
 
 .slider {
     display: flex;
-    padding: 30px 60px;
+    padding: 20px 30px;
     background-color: var(--background);
+    border-radius: 14px;
+    justify-content: center;
 }
 
 
@@ -47,6 +49,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
+    height: fit-content;
 }
 
 .slider__images,
@@ -55,15 +58,21 @@ body {
     padding: 0;
 
     width: 500%;
-    height: 500px;
+    height: auto;
     display: flex;
 
     list-style: none;
 }
 
+.slider__image {
+    width: 100%;
+    height: auto;
+}
+
 
 .slide,
 .slider__text-item {
+    display: flex;
     width: 20%;
 }
 
@@ -75,10 +84,6 @@ body {
     transition: 0.3s
 }
 
-.slide img {
-    width: 800px;
-    height: 500px;
-}
 
 .slider__desc-wrapper {
     display: flex;
@@ -86,11 +91,13 @@ body {
 
 /* Navigation */
 .navigation {
-    width: 30%;
     display: flex;
     justify-content: right;
+
     margin: 0;
     padding: 0;
+
+    width: 30%;
     overflow: 0;
     list-style: none;
 }
