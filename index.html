@@ -26,24 +26,60 @@
             <div class="slider__images-wrapper">
                 <ul class="slider__images">
                     <li class="first slide">
-                        <img class="slider__image" src="./img/leonid.jpg" 
-                                width="800" height="600"
-                                alt="'This is frontend' mem"/>
+                        <picture>
+                            <source media="(min-width: 421px)" type="image/avif" srcset="./img/leonid.avif">
+                            <source srcset="./img/leonid-mobile.avif" type="image/avif">
+
+                            <source media="(min-width: 421px)" type="image/webp" srcset="./img/leonid.webp">
+                            <source srcset="./img/leonid-mobile.webp" type="image/webp">
+
+                            <source media="(min-width: 421px)" srcset="./img/leonid.jpg">
+                            <img class="slider__image" src="./img/leonid-mobile.jpg" 
+                                    width="800" height="600"
+                                    alt="'This is frontend' mem">
+                        </picture>
                     </li>
                     <li class="slide">
-                        <img class="slider__image"  src="./img/elon.jpg" 
-                                width="800" height="600"
-                                alt="'When a backend developer does frontend' mem"/>
+                        <picture>
+                            <source media="(min-width: 421px)" type="image/avif" srcset="./img/elon.avif">
+                            <source srcset="./img/elon-mobile.avif" type="image/avif">
+
+                            <source media="(min-width: 421px)" type="image/webp" srcset="./img/elon.webp">
+                            <source srcset="./img/elon-mobile.webp" type="image/webp">
+
+                            <source media="(min-width: 421px)" srcset="./img/elon.jpg">
+                            <img class="slider__image" src="./img/elon-mobile.jpg" 
+                                    width="800" height="600"
+                                    alt="'When a backend developer does frontend' mem">
+                        </picture>
                     </li>
                     <li class="slide">
-                        <img class="slider__image"  src="./img/linked-list.jpg" 
-                                width="800" height="600"
-                                alt="'Linked List data structures' mem"/>
+                        <picture>
+                            <source media="(min-width: 421px)" type="image/avif" srcset="./img/linked-list.avif">
+                            <source srcset="./img/linked-list-mobile.avif" type="image/avif">
+
+                            <source media="(min-width: 421px)" type="image/webp" srcset="./img/linked-list.webp">
+                            <source srcset="./img/linked-list-mobile.webp" type="image/webp">
+
+                            <source media="(min-width: 421px)" srcset="./img/linked-list.jpg">
+                            <img class="slider__image" src="./img/linked-list-mobile.jpg" 
+                                    width="800" height="600"
+                                    alt="'Linked List data structures' mem">
+                        </picture>
                     </li>
                     <li class="slide">
-                        <img class="slider__image"  src="./img/react-vs-angular.jpg" 
-                                width="800" height="600"
-                                alt="'React vs Angular' mem"/>
+                        <picture>
+                            <source media="(min-width: 421px)" type="image/avif" srcset="./img/react-vs-angular.avif">
+                            <source srcset="./img/react-vs-angular-mobile.avif" type="image/avif">
+
+                            <source media="(min-width: 421px)" type="image/webp" srcset="./img/react-vs-angular.webp">
+                            <source srcset="./img/react-vs-angular-mobile.webp" type="image/webp">
+
+                            <source media="(min-width: 421px)" srcset="./img/react-vs-angular.jpg">
+                            <img class="slider__image" src="./img/react-vs-angular-mobile.jpg" 
+                                    width="800" height="600"
+                                    alt="'React vs Angular' mem">
+                        </picture>
                     </li>
                 </ul>
             </div>
