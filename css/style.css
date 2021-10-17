@@ -1,3 +1,22 @@
+:root {
+    --background: #25282a;
+    --accent-color: #de6a23;
+    --active-color: #ffffff91;
+    --basic-white: #fff;
+    --main-font: Verdana, Arial, sans-serif;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,12 +29,9 @@ body {
 .slider {
     display: flex;
     padding: 30px 60px;
-    background-color: #25282a;
+    background-color: var(--background);
 }
 
-.slider__control {
-    display: none;
-}
 
 .slider__frame {
     display: flex;
@@ -27,10 +43,15 @@ body {
     overflow: hidden;
 }
 
+.slider__images-wrapper {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .slider__images,
 .text__container {
     margin: 0;
-    margin-bottom: 20px;
     padding: 0;
 
     width: 500%;
@@ -97,13 +118,13 @@ body {
     content: '';
     width: 1rem;
     height: 1rem;
-    background-color: #de6a23;
+    background-color: var(--accent-color);
     border-radius: 50%;
     transition: 0.5s;
 }
 
 .navigation__btn:hover:after {
-    background-color: white;
+    background-color: var(--basic-white);
 }
 
 
@@ -114,45 +135,56 @@ body {
 }
 
 .slider__text-item {
-    font-family: Verdana, Arial, sans-serif;
+    font-family: var(--main-font);
     font-size: 1.5rem;
-    color: white;
+    color: var(--basic-white);
 }
 
 /* controls */
-#radio1:checked~.slider__images .first,
+#radio1:checked~.slider__images-wrapper .slider__images .first,
 #radio1:checked~.slider__desc-wrapper .text .text__container .first {
     margin-left: 0;
 }
 
-#radio2:checked~.slider__images .first,
+#radio2:checked~.slider__images-wrapper .slider__images .first,
 #radio2:checked~.slider__desc-wrapper .text .text__container .first {
     margin-left: -20%;
 }
 
-#radio3:checked~.slider__images .first,
+#radio3:checked~.slider__images-wrapper .slider__images .first,
 #radio3:checked~.slider__desc-wrapper .text .text__container .first {
     margin-left: -40%;
 }
 
-#radio4:checked~.slider__images .first,
+#radio4:checked~.slider__images-wrapper .slider__images .first,
 #radio4:checked~.slider__desc-wrapper .text .text__container .first {
     margin-left: -60%;
 }
 
 
-#radio1:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--1:after {
-    background-color: white;
-}
 
-#radio2:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--2:after {
-    background-color: white;
-}
-
-#radio3:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--3:after {
-    background-color: white;
-}
-
+/* Button - checked */
+#radio1:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--1:after,
+#radio2:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--2:after,
+#radio3:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--3:after,
 #radio4:checked~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--4:after {
-    background-color: white;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    box-sizing: border-box;
+}
+
+/* Button - checked - hover */
+#radio1:checked:hover~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--1:after,
+#radio2:checked:hover~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--2:after,
+#radio3:checked:hover~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--3:after,
+#radio4:checked:hover~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--4:after {
+    border-color: var(--basic-white);
+}
+
+/* Button - checked - active */
+#radio1:checked:active~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--1:after,
+#radio2:checked:active~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--2:after,
+#radio3:checked:active~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--3:after,
+#radio4:checked:active~.slider__desc-wrapper .navigation .navigation__item .navigation__btn--4:after {
+    border-color: var(--active-color);
 }
